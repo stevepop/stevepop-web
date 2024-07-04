@@ -1,0 +1,44 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+const profileImage = '/steve_profile.jpg';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Hello, My name is Steve!</h1>
+			<div class="container">
+				<img src={profileImage} alt="Steve Popoola" />
+			</div>
+			<p>
+				I am a Solutions Architect, Engineering Manager, Mentor, Web/Mobile Engineer, Conference Speaker and Technical writer.
+			</p>
+			<p>
+				I am currently rebuilding my personal website/blog with Astro. Watch this space for updates.
+			</p>
+			
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	img {
+		border-radius: 50%;
+		width: 200px;
+		height: 200px;
+	}
+</style>
